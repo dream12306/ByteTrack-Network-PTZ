@@ -1,8 +1,5 @@
 from multiprocessing.managers import BaseManager
 from multiprocessing import Process, Manager, Pool
-import tkinter as tk
-
-import pylab as p
 
 from camera import Magnify
 from ffmpeg_my import VideoCapture
@@ -74,6 +71,7 @@ if __name__ == "__main__":
     print("已退出")
     pool.close()
     pool.join()
+    mag.reset()
     print("-----------------")
     print("执行完毕")
     # processmain.join()

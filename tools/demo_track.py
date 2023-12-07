@@ -459,8 +459,12 @@ def stoptrack():
 def cancelselect():
     global tp_ids
     global confirm_id
+    global unconfirmed_tp_ids
+    global unconfirmed_tp_ids_state
     confirm_id = -1
     tp_ids = []
+    unconfirmed_tp_ids = []
+    unconfirmed_tp_ids_state = []
 
 def up_press(event):
     global move
@@ -496,16 +500,6 @@ def release(event):
     confirm_id = -1
     move = 'stop'
 
-
-
-# 取消跟踪
-def cancel_tracking():
-    global tp_ids
-    global unconfirmed_tp_ids
-    global unconfirmed_tp_ids_state
-    tp_ids = []
-    unconfirmed_tp_ids_state = []
-    unconfirmed_tp_ids = []
 
 
 def addzoom():
